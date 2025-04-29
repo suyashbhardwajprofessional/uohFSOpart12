@@ -1,0 +1,29 @@
+Script started on 2025-04-29 17:30:41+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="145" LINES="37"]
+[?2004h]0;yash@yash-ThinkPad-T430: ~[01;32myash@yash-ThinkPad-T430[00m:[01;34m~[00m$ sudo docker start -i jolly_leakyey[C
+[?2004l
+[sudo] password for yash: 
+[?2004h]0;root@875e98088240: /root@875e98088240:/# nano /usr/src/app/index.js
+[?2004l
+[?2004h[?1049h[22;0;0t[1;37r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[35;66H(B[0;7m[ Reading... ](B[m[35;65H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 7.2 [49b/usr/src/app/index.js [58b [1;144H(B[m
+[36d(B[0;7m^G(B[m Help[36;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[36;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[36;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket
+[37d(B[0;7m^X(B[m Exit[37;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[37;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[37;113H(B[0;7mM-6(B[m Copy[37;129H(B[0;7m^Q(B[m Where Was
+[2d[?12l[?25h[?25l[1;87H(B[0;7m*[144G(B[m[?12l[?25h
+[2dc[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25hs[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h.[?25l[?12l[?25hl[?25l[?12l[?25ho[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h)[?25l[?12l[?25h[?25l[?12l[?25h')[?25l[?12l[?25h(B[0;1m[35m''[39m(B[m)[?25l[?12l[?25h[?25l[?12l[?25h(B[0;1m[35mH'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35me'[39m(B[m)[?25l
+[35d[K[?12l[?25h[2;16H(B[0;1m[35ml'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35mll'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35mo'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35m '[39m(B[m)[?25l[?12l[?25h(B[0;1m[35mW'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35mo'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35mr'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35ml'[39m(B[m)[?25l[?12l[?25h(B[0;1m[35md'[39m(B[m)[?25l[?12l[?25h[27G[?25l[36;17H[20X[36;37H(B[0;7mM-D(B[m DOS Format    [36;65H [7b(B[0;7mM-A(B[m Append[26X[36;109H(B[0;7mM-B(B[m Backup File[K[37;2H(B[0;7mC(B[m Cancel[17G[20X[37;37H(B[0;7mM-M(B[m Mac Format      [37;65H [7b(B[0;7mM-P(B[m Prepend[25X[37;109H(B[0;7m^T(B[m Browse[K
+[35d(B[0;7mFile Name to Write: /usr/src/app/index.js [102b [35;42H(B[m[?12l[?25h[?25l[35;65H[1K (B[0;7m[ Writing... ](B[m[K[1;87H(B[0;7m [144G(B[m[35;65H(B[0;7m[ Wrote 1 line ](B[m[36;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[36;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo [7b(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[37;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[37;65H(B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo [7b(B[0;7mM-6(B[m Copy[37;129H(B[0;7m^Q(B[m Where Was[?12l[?25h[2;27H[?25l
+[35d[J[37d[?12l[?25h[37;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;root@875e98088240: /root@875e98088240:/# [Knano /usr/src/app/index.js
+[?2004l
+[?2004h[?1049h[22;0;0t[1;37r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[35;66H(B[0;7m[ Reading... ](B[m[35;72H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 7.2 [49b/usr/src/app/index.js [58b [1;144H(B[m
+[36d(B[0;7m^G(B[m Help[36;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[36;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[36;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket
+[37d(B[0;7m^X(B[m Exit[37;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[37;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[37;113H(B[0;7mM-6(B[m Copy[37;129H(B[0;7m^Q(B[m Where Was
+[2dconsole.log((B[0;1m[35m'Hello World'[39m(B[m)
+[?12l[?25h[?25l[35d[J[37d[?12l[?25h[37;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;root@875e98088240: /root@875e98088240:/# [Kexit
+[?2004l
+exit
+[?2004h]0;yash@yash-ThinkPad-T430: ~[01;32myash@yash-ThinkPad-T430[00m:[01;34m~[00m$ exit
+[?2004l
+exit
+
+Script done on 2025-04-29 17:33:18+05:30 [COMMAND_EXIT_CODE="0"]
