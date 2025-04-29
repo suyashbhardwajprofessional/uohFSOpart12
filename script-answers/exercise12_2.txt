@@ -1,0 +1,91 @@
+Script started on 2025-04-29 16:46:29+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="145" LINES="37"]
+[?2004h]0;yash@yash-ThinkPad-T430: ~/uohFSOpart12[01;32myash@yash-ThinkPad-T430[00m:[01;34m~/uohFSOpart12[00m$ [7mdocker run -it ubuntu bash[27mdocker run -it ubuntu bash
+[?2004l
+docker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied
+
+Run 'docker run --help' for more information
+[?2004h]0;yash@yash-ThinkPad-T430: ~/uohFSOpart12[01;32myash@yash-ThinkPad-T430[00m:[01;34m~/uohFSOpart12[00m$ docker run -it ubuntu bash[1@s[1@u[C[1@d[1@o[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l
+[sudo] password for yash: 
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K
+2726e237d1a3: Pulling fs layer 
+[1B[1A[2K
+2726e237d1a3: Downloading [>                                                  ]  311.3kB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Downloading [======>                                            ]  3.984MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Downloading [============>                                      ]  7.674MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Downloading [===================>                               ]  11.71MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Downloading [=========================>                         ]  15.43MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Downloading [================================>                  ]  19.45MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Downloading [=======================================>           ]  23.45MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Downloading [==============================================>    ]  27.45MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Verifying Checksum 
+[1B[1A[2K
+2726e237d1a3: Download complete 
+[1B[1A[2K
+2726e237d1a3: Extracting [>                                                  ]  327.7kB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [======>                                            ]  3.932MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [============>                                      ]  7.209MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [===============>                                   ]  9.503MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [======================>                            ]  13.43MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [==============================>                    ]  18.02MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [====================================>              ]  21.95MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [==========================================>        ]  25.23MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [===========================================>       ]  25.56MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [==============================================>    ]  27.85MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [=================================================> ]  29.49MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Extracting [==================================================>]  29.72MB/29.72MB
+[1B[1A[2K
+2726e237d1a3: Pull complete 
+[1BDigest: sha256:1e622c5f073b4f6bfad6632f2616c7f59ef256e96fe78bf6a595d1dc4376ac02
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@875e98088240: /root@875e98088240:/# ls
+[?2004l
+[0m[01;36mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;36mlib[0m  [01;36mlib64[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;36msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+[?2004h]0;root@875e98088240: /root@875e98088240:/# mkdir /usr/s
+sbin/  share/ src/   
+]0;root@875e98088240: /root@875e98088240:/# mkdir /usr/src/app
+[?2004l
+[?2004h]0;root@875e98088240: /root@875e98088240:/# cd use r/src/
+[?2004l
+[?2004h]0;root@875e98088240: /usr/srcroot@875e98088240:/usr/src# ls
+[?2004l
+[0m[01;34mapp[0m
+[?2004h]0;root@875e98088240: /usr/srcroot@875e98088240:/usr/src# cd app/
+[?2004l
+[?2004h]0;root@875e98088240: /usr/src/approot@875e98088240:/usr/src/app# ls
+[?2004l
+[?2004h]0;root@875e98088240: /usr/src/approot@875e98088240:/usr/src/app# touch index.js
+[?2004l
+[?2004h]0;root@875e98088240: /usr/src/approot@875e98088240:/usr/src/app# ls
+[?2004l
+index.js
+[?2004h]0;root@875e98088240: /usr/src/approot@875e98088240:/usr/src/app# exit
+[?2004l
+exit
+[?2004h]0;yash@yash-ThinkPad-T430: ~/uohFSOpart12[01;32myash@yash-ThinkPad-T430[00m:[01;34m~/uohFSOpart12[00m$ exit
+[?2004l
+exit
+
+Script done on 2025-04-29 16:48:40+05:30 [COMMAND_EXIT_CODE="0"]
