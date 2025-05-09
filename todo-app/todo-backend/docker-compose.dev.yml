@@ -1,22 +1,9 @@
 services:
-  server:
-    image: todoserv-dev
-    build:
-      context: . # The context will pick this directory as the "build context"
-      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
-    volumes:
-      - ./:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
-    ports:
-      - 3000:3000
-    container_name: todoserv-dev # This will name the container hello-front-dev
-    environment: 
-      REDIS_URL: mongodb://the_username:the_password@localhost:3456/the_database
-      MONGO_URL: //localhost:6379
-
   mongo:
     image: mongo
     ports:
       - 3456:27017
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -24,6 +11,17 @@ services:
     volumes:
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
       - ./mongo_data:/data/db
+
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: root
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: example
+  #     ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+  #     ME_CONFIG_BASICAUTH: false
 
   redis:
     image: redis:7
@@ -33,5 +31,18 @@ services:
     volumes: # Declare the volume
       - ./redis_data:/data
 
-  debug-helper:
-    image: busybox
+  server:
+    image: todoserv-dev
+    depends_on:
+      - mongo
+    build:
+      context: . # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    ports:
+      - 3000:3000
+    container_name: todoserv-dev # This will name the container hello-front-dev
+    environment: 
+      
+      MONGO_URL: mongodb://root:example@mongo:27017/the_database?authSource=admin
