@@ -1,0 +1,61 @@
+services:
+  app:
+    image: todoapp-fe-dev
+    build:
+      context: . # The context will pick this directory as the "build context"
+      dockerfile: todo-frontend/dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./todo-frontend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    container_name: todoapp-fe-dev # This will name the container hello-front-dev
+  
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: the_database
+    volumes:
+      - ./todo-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - ./todo-backend/mongo_data:/data/db
+
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: root
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: example
+  #     ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+  #     ME_CONFIG_BASICAUTH: false
+
+  redis:
+    image: redis:7
+    command: ['redis-server', '--appendonly', 'yes'] # Overwrite the CMD
+    volumes: # Declare the volume
+      - ./todo-backend/redis_data:/data
+
+  server:
+    image: todoapp-be-dev
+    depends_on:
+      - mongo
+    build:
+      context: . # The context will pick this directory as the "build context"
+      dockerfile: todo-backend/dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./todo-backend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    container_name: todoapp-be-dev # This will name the container hello-front-dev
+    environment: 
+      REDIS_URL: redis://redis:6379
+      MONGO_URL: mongodb://root:example@mongo:27017/the_database?authSource=admin
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - app # wait for the frontend container to be started
